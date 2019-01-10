@@ -1,2 +1,2 @@
-# gwa_student.server
-Microservice that maintains endpoints related to the student
+# gwap-student
+Microservice that maintains endpoints related to the register student

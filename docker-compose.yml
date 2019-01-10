@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gwap-student:
+    container_name: gwap-student
+    build: .
+    expose:
+      - 8000
+    ports:
+      - 8080:8080
+    env_file:
+      - environments/hml.env
