@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: gwa-student
-        image: gwapwebacr.azurecr.io/gwap-student
+        image: gwapwebacr.azurecr.io/gwap-student:latest
         ports:
         - containerPort: 8080
