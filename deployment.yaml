@@ -1,22 +1,10 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: gwa-student-web
-  labels:
-    app: gwa-student
+  name: gwap-student
 spec:
-  selector:
-    matchLabels:
-      app: gwa-student
-      tier: web
-  template:
-    metadata:
-      labels:
-        app: gwa-student
-        tier: web
-    spec:
-      containers:
-      - name: gwa-student
-        image: gwapwebacr.azurecr.io/gwap-student:latest
-        ports:
-        - containerPort: 8080
+  containers:
+  - name: gwap-student
+    image: gwapwebacr.azurecr.io/gwap-student:latest
+  imagePullSecrets:
+  - name: gwap-secret
