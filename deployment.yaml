@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gwa-student-web
+  labels:
+    app: gwa-student
+spec:
+  selector:
+    matchLabels:
+      app: gwa-student
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: gwa-student
+        tier: web
+    spec:
+      containers:
+      - name: gwa-student
+        image: gwapwebacr.azurecr.io/gwap-student
+        ports:
+        - containerPort: 8080
